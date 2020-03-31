@@ -1,0 +1,238 @@
+body{
+    background:#f5f5f5;
+}
+.tab{
+    background:#fff;
+    margin-bottom:10px;
+    height:55px;
+}
+.tab ul{}
+.tab ul li{
+    float:left;
+    width:33.33%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    color:#969696;
+    font-size:1.6rem;
+}
+.tab ul li .tab_line{
+    display:none;
+    width: 30px;
+    height: 5px;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+.tab ul li.on{
+    color:#323232;
+}
+.tab ul li.on .tab_line{
+    display:block;
+}
+
+.tab_bd{
+    position:absolute;
+    width:100%;
+    height: calc(100% - 80px);
+    overflow: auto;   
+}
+.tab_bd{}
+.tab_bd .bd_title{
+    padding: 20px 0 10px 0;
+    text-align: center;
+    font-size:1.6rem;
+    background: #fff;
+}
+.tab_bd .bd_title .bd_title_line{}
+.tab_bd .bd_title .bd_title_txt{
+    margin:0 5px;
+    font-weight:bold;
+}
+.tab_bd .bd_content{
+    padding:10px 10px 20px;
+    background:#fff;
+}
+.tab_bd .bd_content ul{}
+.tab_bd .bd_content ul li{
+    float:left;
+    width:50%;
+}
+.tab_bd .bd_content ul li img{
+    width:100%;
+}
+.vip{}
+.vip .vip_button{
+    margin:20px auto;
+    width:70%;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    color:#fff;
+    font-size:1.6rem;
+    border-radius:20px;
+}
+.vip .vip_end{
+    text-align:center;
+    color:#646464;
+}
+
+/* VIP购买弹窗 */
+.vip .vip_buy_body{
+	background:#fff;
+}
+
+.vip .vip_buy_body .vip_buy_list{
+    padding:0 10px;
+}
+.vip .vip_buy_body .vip_buy_list .vip_buy_list_t{
+    display:inline-block;
+    width:80px;
+    height:50px;
+    line-height:50px;
+    color:#646464;
+    font-size:1.6rem;
+    font-weight:bold;
+    vertical-align:top;
+}
+.vip .vip_buy_body .vip_buy_list .vip_buy_list_b{
+    display:inline-block;
+    height:50px;
+    line-height:50px;
+    font-size:1.6rem;
+    vertical-align:top;
+}
+.vip .vip_buy_body .vip_buy_list .vip_buy_list_b ul{
+    padding:5px 0;
+}
+.vip .vip_buy_body .vip_buy_list .vip_buy_list_b ul li{
+    position:relative;
+    float:left;
+    margin-left:10px;
+    padding:0 10px;
+    height:38px;
+    line-height:38px;
+    text-align:center;
+    color:#969696;
+    font-size:1.6rem;
+    border:1px solid #f5f5f5;
+    border-radius:5px;
+}
+.vip .vip_buy_body .vip_buy_list .vip_buy_list_b ul li:first-child{
+    margin-left:0;
+}
+.vip .vip_buy_body .vip_buy_list .vip_buy_list_b ul li.on{
+    color:#ffdd00;
+    border:1px solid #ffdd00;
+}
+.vip .vip_buy_body .vip_buy_list .vip_buy_list_b ul li.on:after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:12px;
+    height:12px;
+    background:url("../images/mall/vip_select.png") no-repeat right bottom;
+    background-size:12px;
+}
+.vip .vip_buy_body #vip_total_coin{
+    color:#ffdd00;
+}
+.vip .vip_buy_body #user_coin{
+    color:#ffdd00;
+}
+.vip .vip_buy_body .vip_submit_bd{
+    margin-top:10px;
+    padding:15px 10px;
+    border-top:1px solid #f5f5f5;
+}
+
+.vip .vip_buy_body .vip_submit_bd .vip_submit_bd_r{
+    float:right;
+    margin-top:3px;
+    padding:0 25px;
+    height:44px;
+    line-height:44px;
+    background:#ffdd00;
+    border-radius:25px;
+    color:#fff;
+    font-size:1.6rem;
+}
+
+/* 靓号 */
+.liang .bd_content ul li{
+    margin:5px;
+    padding:20px 10px 10px;
+    width:calc(33.33% - 10px);
+    
+    -moz-box-sizing: border-box;  /*Firefox3.5+*/
+	-webkit-box-sizing: border-box; /*Safari3.2+*/
+	-o-box-sizing: border-box; /*Opera9.6*/
+	-ms-box-sizing: border-box; /*IE8*/
+	box-sizing: border-box;    
+    -webkit-box-shadow: 0 0 5px 2px #f5f5f5;
+    -moz-box-shadow: 0 0 5px 2px #f5f5f5;
+    box-shadow: 0 0 5px 2px #f5f5f5;
+}
+.liang .bd_content ul li .liang_id{
+    font-size:1.8rem;
+    font-weight:bold;
+}
+.liang .bd_content ul li .liang_coin{
+    height:42px;
+    color:#ffdd00;
+}
+.liang .bd_content ul li .liang_buy{
+    margin:10px auto 0;
+    width:70px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    color:#ffdd00;
+    border:1px solid #ffdd00;
+    border-radius:15px;
+}
+
+/* 坐骑 */
+.car .bd_content ul li{
+    margin:5px;
+    padding:10px 10px 10px;
+    width:calc(33.33% - 10px);
+    
+    -moz-box-sizing: border-box;  /*Firefox3.5+*/
+	-webkit-box-sizing: border-box; /*Safari3.2+*/
+	-o-box-sizing: border-box; /*Opera9.6*/
+	-ms-box-sizing: border-box; /*IE8*/
+	box-sizing: border-box;    
+    -webkit-box-shadow: 0 0 5px 2px #f5f5f5;
+    -moz-box-shadow: 0 0 5px 2px #f5f5f5;
+    box-shadow: 0 0 5px 2px #f5f5f5;
+    text-align:center;
+}
+.car .bd_content ul li .car_img{
+    height:100px;
+}
+.car .bd_content ul li .car_img img{
+    max-width:100%;
+    max-height:100%;
+}
+.car .bd_content ul li .car_title{
+    font-size:1.5rem;
+    font-weight:bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.car .bd_content ul li .car_coin{
+    height:42px;
+    color:#ffdd00;
+}
+.car .bd_content ul li .car_buy{
+    margin:10px auto 0;
+    width:70px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    color:#ffdd00;
+    border:1px solid #ffdd00;
+    border-radius:15px;
+}

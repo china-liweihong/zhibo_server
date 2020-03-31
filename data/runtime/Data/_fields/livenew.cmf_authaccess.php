@@ -1,0 +1,1 @@
+a:4:{i:0;s:7:"role_id";i:1;s:9:"rule_name";i:2;s:4:"type";s:5:"_type";a:3:{s:7:"role_id";s:21:"mediumint(8) unsigned";s:9:"rule_name";s:12:"varchar(255)";s:4:"type";s:11:"varchar(30)";}}

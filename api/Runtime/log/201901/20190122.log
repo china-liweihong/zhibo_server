@@ -1,0 +1,11 @@
+2019-01-22 13:46:02|DEBUG|succeed to upload file to qiniu|{"hash":"FhBzx8UvZ9qOSMK1B6Wl9QwCgVLL","key":"20190122134602_1e96061fdfcca452d763710caafe75fe"}
+2019-01-22 15:30:14|ERROR|Home.attentRecommend|PDOException: Out of range value for column 'touid' at row 1 in /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Model/Home.php(341): NotORM_Result->insert(Array)
+#3 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Domain/Home.php(70): Model_Home->attentRecommend('23459', '21788,21784,217...')
+#4 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Api/Home.php(412): Domain_Home->attentRecommend('23459', '21788,21784,217...')
+#5 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): Api_Home->attentRecommend()
+#6 /data/wwwroot/livenew.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#7 {main}

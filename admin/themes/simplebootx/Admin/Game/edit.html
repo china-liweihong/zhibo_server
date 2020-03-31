@@ -1,0 +1,105 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:U('Game/index3')}">列表</a></li>
+			<li class="active"><a >编辑</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="{:U('Game/edit_post')}">
+		   <input type="hidden" name="id" value="{$game['id']}">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">游戏名称</label>
+					<div class="controls">
+						<input type="text" name="name" value="{$game['name']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">最大下注总金额</label>
+					<div class="controls">
+						<input type="text" name="coin_max" value="{$game['coin_max']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">单用户下注最大金额</label>
+					<div class="controls">
+						<input type="text" name="coin_user_max"  value="{$game['coin_user_max']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">位置1最大金额</label>
+					<div class="controls">
+						<input type="text" name="coin_max_1"  value="{$game['coin_max_1']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">位置2最大金额</label>
+					<div class="controls">
+						<input type="text" name="coin_max_2"  value="{$game['coin_max_2']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">位置3最大金额</label>
+					<div class="controls">
+						<input type="text" name="coin_max_3"  value="{$game['coin_max_3']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">位置4最大金额</label>
+					<div class="controls">
+						<input type="text" name="coin_max_4"  value="{$game['coin_max_4']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">位置1中奖倍率</label>
+					<div class="controls">
+						<input type="text" name="rate_1"  value="{$game['rate_1']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">位置2中奖倍率</label>
+					<div class="controls">
+						<input type="text" name="rate_2"  value="{$game['rate_2']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">位置3中奖倍率</label>
+					<div class="controls">
+						<input type="text" name="rate_3"  value="{$game['rate_3']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">位置4中奖倍率</label>
+					<div class="controls">
+						<input type="text" name="rate_4"  value="{$game['rate_4']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">下注时间</label>
+					<div class="controls">
+						<input type="text" name="wait_time"  value="{$game['wait_time']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('EDIT')}</button>
+				<a class="btn" href="{:U('Game/index3')}">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

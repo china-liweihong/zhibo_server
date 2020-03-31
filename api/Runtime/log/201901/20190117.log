@@ -1,0 +1,28 @@
+2019-01-17 00:31:21|ERROR|Home.attentRecommend|PDOException: Out of range value for column 'touid' at row 1 in /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Model/Home.php(341): NotORM_Result->insert(Array)
+#3 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Domain/Home.php(70): Model_Home->attentRecommend('23325', '21788,21784,217...')
+#4 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Api/Home.php(412): Domain_Home->attentRecommend('23325', '21788,21784,217...')
+#5 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): Api_Home->attentRecommend()
+#6 /data/wwwroot/livenew.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#7 {main}
+2019-01-17 00:31:22|ERROR|Home.attentRecommend|PDOException: Out of range value for column 'touid' at row 1 in /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Model/Home.php(341): NotORM_Result->insert(Array)
+#3 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Domain/Home.php(70): Model_Home->attentRecommend('23325', '21788,21784,217...')
+#4 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Api/Home.php(412): Domain_Home->attentRecommend('23325', '21788,21784,217...')
+#5 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): Api_Home->attentRecommend()
+#6 /data/wwwroot/livenew.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#7 {main}
+2019-01-17 10:06:09|DEBUG|succeed to upload file to qiniu|{"hash":"Fvy7KNKJxltM-xtMuhu0lAWqd4cL","key":"20190117100609_9dd4b332376ae9fbfee95238d60e8187"}
+2019-01-17 12:16:13|DEBUG|succeed to upload file to qiniu|{"hash":"Fk8wqYQn1Q2Jsj7i4Kj4T4VfuyIg","key":"20190117121613_b487997f6428bf3472c6be80dcbfd2a7"}
+2019-01-17 12:17:21|DEBUG|succeed to upload file to qiniu|{"hash":"FhXYBMalcM8k83ZddtWOqf855xQv","key":"20190117121721_eb043974e2c8005b7bb0f9615695e2a7"}
+2019-01-17 12:57:44|DEBUG|succeed to upload file to qiniu|{"hash":"Fl0grs0Pje5nnx1HBz9ryxACDfoA","key":"20190117125744_9573bb3bd26b6ed548ec73024aae5e22"}
+2019-01-17 13:18:41|DEBUG|succeed to upload file to qiniu|{"hash":"FljeMe5vxd1-SQxMQEctRCDWQMG3","key":"20190117131841_a6596463dbe88ba97d217762c5f48e7f"}
+2019-01-17 14:15:49|DEBUG|succeed to upload file to qiniu|{"hash":"FgfTux-Nu-h9wLHJ2obhAhKNOgkI","key":"20190117141549_90693c4df059ab3a8dfec1d082755838"}
+2019-01-17 14:32:00|DEBUG|succeed to upload file to qiniu|{"hash":"FnnPS0NoNSBC06t0FVnK4k3D2GVi","key":"20190117143200_64dee4d167e48537010dcd0e73dc5ba3"}
+2019-01-17 16:49:50|DEBUG|succeed to upload file to qiniu|{"hash":"FrV_GTwl1xInPFz3TKYgSDLN9RNa","key":"20190117164950_7c2b611cd4c124abb0685353cd8b095c"}

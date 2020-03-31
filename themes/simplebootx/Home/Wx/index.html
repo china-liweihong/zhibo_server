@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html style="font-size: 85.3333px;">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>充值账户</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+    <script>
+        function setRemFontSize(baseSize,baseWidth){
+            var baseSize = baseSize||100,baseWidth = baseWidth||375,
+						clientWidth = document.documentElement.clientWidth<=480?document.documentElement.clientWidth: 480 ;
+            document.getElementsByTagName('html')[0].style.fontSize = clientWidth*baseSize/baseWidth+'px'
+        }
+        setRemFontSize();
+        window.addEventListener("resize",function(){
+            setTimeout(function(){setRemFontSize();},200)
+        });
+    </script>
+    <link rel="stylesheet" href="__PUBLIC__/home/wx/css/index.css">
+</head>
+<body>
+
+<div class="main">
+    <span class="recharge_account">充值账户</span>
+    <!-- 输入映客号 -->
+    <div class="recharge_con js_recharge_con " id="">
+        <div class="recharge_txt">
+            <input type="text" class="js-uid-ipt" maxlength="10" placeholder="请输入账号">
+            <span class="switch-btn js-switch-btn"> </span>
+            <span class="confirm" id="js-confirm-login">确认</span>
+        </div>
+        <div class="recharge_point ">
+            <a href="#" class="get_id " id="js-get-id-btn "></a>
+            <p class="point_error "></p>
+        </div>
+    </div>
+    <!-- 充值用户信息 -->
+    <div class="recharge_user js_recharge_user hide" data-id="">
+        <div class="user_image">
+            <p>
+                <img class="" src="#" alt="">
+            </p>
+        </div>
+        <div class="user_detail">
+            <p class="user_nick"></p>
+            <p>
+                映客号:<span class="js_user_id"></span>
+            </p>
+        </div>
+        <div class="user_change" id="js-user-change-btn">
+            <p>
+                切换账号
+            </p>
+        </div>
+    </div>
+    <!-- 财富 -->
+    <div class="pay_list_container " id="js_all_goods_list">
+			<div class="wealth" data-key="wx_list" id="wx_list_con">
+				<div class="one_line">
+						<div class="diamond_detail " data-id="61" data-send="送" data-money="6">
+								<p class="">60钻石</p>
+								<p class="">￥6元</p>
+						</div>
+
+						<div class="diamond_detail  active" data-id="62" data-send="送" data-money="30">
+								<p class="">300钻石</p>
+								<p class="">￥30元</p>
+						</div>
+
+						<div class="diamond_detail " data-id="63" data-send="送10" data-money="98">
+								<p class="">980钻石</p>
+								<p class="">￥98元</p>
+						</div>
+				</div> 
+				<div class="one_line">
+						<div class="diamond_detail " data-id="64" data-send="送90" data-money="298">
+								<p class="">2980钻石</p>
+								<p class="">￥298元</p>
+						</div>
+
+						<div class="diamond_detail " data-id="65" data-send="送180" data-money="588">
+								<p class="">5880钻石</p>
+								<p class="">￥588元</p>
+						</div>
+
+						<div class="diamond_detail " data-id="122" data-send="送800" data-money="2999">
+								<p class="">29990钻石</p>
+								<p class="">￥2999元</p>
+						</div>
+				</div>
+			</div>
+		</div>
+
+    <!-- 支付 -->
+    <div class="pay js-channel-list">
+        <ul class="js-channel-ul">
+            <li class="item wechart active" data-channel="wx_list">
+                <div class="pay_detail">
+                    <p>
+                        微信支付
+                    </p>
+                    <p>
+                        微信安全支付
+                    </p>
+                </div>
+                <div class="pay_change"></div>
+            </li>
+        </ul>
+    </div>
+    <span class="pay_confirm disabled" id="js_pay_confirm">确认支付</span>
+</div>
+
+
+<div class="tip-mask"> <div class="tip-con"></div>  </div>
+
+<!--alipay跳转-->
+<div id="alipay_form" style="display:none"></div>
+<!--alipay跳转结束-->
+
+<!--callback-->
+<div id="callback_bg" style="display: none;">
+    <div id="callback">
+        <div class="d1" id="callback_text"></div>
+        <img src="#" id="chenggong">
+        <img src="./images/cha.png" class="callback_close">
+    </div>
+</div>
+<!--callback-->
+
+<script src="__PUBLIC__/home/js/jquery.js"></script>
+<script src="__PUBLIC__/home/wx/js/index.js"></script>
+</body>
+</html>

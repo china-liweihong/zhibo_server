@@ -1,0 +1,22 @@
+2019-01-07 11:01:53|ERROR|Login.userLoginByThird|PDOException: Duplicate entry '23018' for key 'PRIMARY' in /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Model/Login.php(339): NotORM_Result->insert(Array)
+#3 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Domain/Login.php(43): Model_Login->upUserPush('23018', '18171adc034de7a...')
+#4 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Api/Login.php(306): Domain_Login->upUserPush('23018', '18171adc034de7a...')
+#5 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): Api_Login->userLoginByThird()
+#6 /data/wwwroot/livenew.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#7 {main}
+2019-01-07 16:15:39|DEBUG|succeed to upload file to qiniu|{"hash":"FspSiZY42DuGDoSmULiQWMUYO5KJ","key":"20190107161539_e386e0b6537ae01de1e219789be58370"}
+2019-01-07 18:27:04|ERROR|Home.attentRecommend|PDOException: Out of range value for column 'touid' at row 1 in /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Model/Home.php(327): NotORM_Result->insert(Array)
+#3 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Domain/Home.php(70): Model_Home->attentRecommend('23035', '21788,21784,217...')
+#4 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Api/Home.php(412): Domain_Home->attentRecommend('23035', '21788,21784,217...')
+#5 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): Api_Home->attentRecommend()
+#6 /data/wwwroot/livenew.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#7 {main}
+2019-01-07 23:22:19|DEBUG|succeed to upload file to qiniu|{"hash":"FlynXoC1STr-ch88kViDhOiG4Qx-","key":"20190107232218_48910d154488964e626376c60ebd212e"}

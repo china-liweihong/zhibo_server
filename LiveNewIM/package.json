@@ -1,0 +1,17 @@
+{
+  "name": "yunbaoIM",
+  "version": "1.0.0",
+  "description": "云豹直播IM通信",
+  "main": "s1.js",
+  "scripts": {
+    "start": "node s1.js"
+  },
+  "author": "KZ",
+  "license": "Not OpenSources",
+  "dependencies": {
+    "redis": "^2.7.1",
+    "request": "^2.81.0",
+    "socket.io": "^1.7.4",
+    "socket.io-redis": "^4.0.0"
+  }
+}

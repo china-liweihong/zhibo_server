@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta content="telephone=no" name="format-detection" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>{$liveinfo['title']|default=$config['sitename']}</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/appapi/share/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/appapi/share/css/style.css">
+
+	<link href="__PUBLIC__/appapi/share/css/video-js.min.css" rel="stylesheet">
+    <script type="text/javascript" src="__PUBLIC__/appapi/share/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/appapi/share/js/txbb-pop.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/appapi/share/js/template.js"></script> 
+    <script type="text/javascript">
+        var room_id = '{$liveinfo['stream']}';
+        var to_uid = '{$liveinfo['uid']}';
+        //var User = {$userinfoj};
+        var User = {};
+        
+		
+		var isiPad = /iPad/i.test(navigator.userAgent);
+		var isiPhone = /iPhone|iPod/i.test(navigator.userAgent);
+		var isAndroid = /Android/i.test(navigator.userAgent);
+		var isWeixin = /MicroMessenger/i.test(navigator.userAgent);
+		var isQQ = /QQ/i.test(navigator.userAgent);
+		var isIOS = (isiPad || isiPhone);
+		var isWeibo = /Weibo/i.test(navigator.userAgent);
+		var isApp = (isAndroid || isIOS);
+		
+
+		
+		var fly="";
+        var videosrc='{$hls}';
+		var livetype='{$livetype}';
+        var myPlayer;
+        var h=window.screen.height;
+        var videotimer='',request='';
+
+        $(function(){
+            videotimer=setTimeout("connectChange()", 1000);
+        });
+
+        function connectChange(){
+			myPlayer = videojs("videoHLS");
+			if(livetype==0){
+				if(videosrc){
+					$("#videoPlay").show(); 
+					var div='<button id="play"><img src="__PUBLIC__/appapi/share/images/play.png" width="61"></button>';
+					$("#top_box").append(div);
+					$("#state").hide();
+					myPlayer.height(h);
+					myPlayer.show()
+					$("#top_box").show();
+				}else{
+					$("#videoPlay").hide();   
+					$("#play").remove();       
+					$("#state").show();
+					$("#top_box").hide();
+					$(".jw-preview").show();
+					$(".section1_box .roomtitle").remove();
+					clearInterval(videotimer);
+					return !1;
+				}
+			}else{
+				$("#state h2").html("该房间为密码或收费房间，请下载APP观看....");
+				$("#videoPlay").hide();   
+				$("#play").remove();       
+				$("#state").show();
+				$("#top_box").hide();
+				$(".jw-preview").show();
+				$(".section1_box .roomtitle").remove();
+				clearInterval(videotimer);
+				return !1;
+			}
+            //开始或恢复播放
+            myPlayer.on('play', function() {  
+                if(document.getElementById('roomtitle')) {
+                    $("#roomtitle").remove();
+                }
+                if(isAndroid){
+                    var html='<div id="roomtitle" class="roomtitle">&nbsp;</div>';
+                    $(".section1_box .header").prepend(html);
+                }
+                //myPlayer.height(h);
+                $("#top_box").hide();
+                $(".jw-preview").hide();
+
+            });
+            // 暂停播放
+            myPlayer.on('pause', function() { 
+                $(".section1_box .roomtitle").remove(); 
+                $("#top_box").show();
+            });
+
+      }
+    </script> 
+</head>
+<body>
+
+<!--视频-->
+<section class="section1">
+    <article class="jwplayer jw-reset jw-stretch-fill">
+        <div class="jw-media jw-reset">
+            <div id="videoPlay" style="width:100%;height:100%;position:absolute;top:0;left:0;overflow:hidden;">
+                <video id="videoHLS" class="video-js vjs-big-play-centered" style="width:100%;"  data-setup="{'preload': 'auto'}" webkit-playsinline  playsinline  x-webkit-airplay="true" x5-video-player-type="h5"  x5-video-player-fullscreen="true" poster="">
+                    <source src="{$hls}" type="application/x-mpegURL">
+                </video>
+            </div>
+            <div id="state" style="text-align:center;line-height:40px;position:absolute;top:35%;z-index:11;color:#fff;padding:20px;display:none;">
+                <h2></h2>
+            </div>
+            <div class="jw-preview jw-reset" style="background-image: url('{$videoinfo['thumb']}')"></div>
+        </div>
+    </article>
+ 
+    <article class="section1_box" id="section1_box">
+        <header class="header clearfix">
+            <div class="clearfix">
+                <div class="userinfo">
+                    <img src="{$liveinfo['avatar_thumb']}" userid="{$liveinfo['id']}">
+                    <span class="ulive">{$liveinfo['user_nicename']}</span>
+                    <span class="unum">ID：{$liveinfo['id']}</span>
+                </div>
+                <div class="userimg" id="userimg">
+                    <ul class="userpic clearfix" id="userpic"></ul>
+                </div>
+
+				<if condition="$isattention eq 1">
+				<div class="user_followed on" type="1">
+					已关注
+				</div>
+				<else/>
+				<div class="user_followed" type="0">
+					关注
+				</div>
+				</if>
+            </div>
+            <span class="charmval" userid="836">
+                <span class="meilizhi">投票</span>
+                <span class="mlz_num"></span>
+            </span>
+        </header>
+        <article id="heart"><canvas id="canvas"></canvas></article>
+
+        <figure class="share_box">
+            <figcaption class="share_title">分享至</figcaption>
+            <div class="iShare iShare-32 iShare3">
+                <a href="javascript:void(0);" class="iShare_wechat"><i class="icon iconfont wechat" style="vertical-align: -2px;">&#xe60a;</i><p>微信</p></a>
+                <a href="javascript:void(0);" class="iShare_qq"><i class="icon iconfont qq" style="vertical-align: 1px;">&#xe60c;</i><p>QQ</p></a>
+                <a href="#" class="iShare_qzone"><i class="icon iconfont qzone">&#xe60d;</i><p>QQ空间</p></a>
+                <a href="#" class="iShare_tencent"><i class="icon iconfont tencent" style="vertical-align: -2px;">&#xe60b;</i><p>腾讯微博</p></a>
+                <a href="#" class="iShare_weibo"><i class="icon iconfont weibo">&#xe60e;</i><p>新浪微博</p></a>
+            </div>
+        </figure>
+
+        <nav class="chat-tool">
+            <ul>
+                <li style="width:20%;text-align:left;display:none;">
+                    <img src="__PUBLIC__/appapi/share/images/ic_room_flash_normal.png" id="more-btn">
+                    <div class="more_list">
+                        <a class="more_share" id="more_share">分享</a>
+                        <a href="" class="more_center" id="more_center">登陆</a>  
+                    </div>
+                </li>
+                <li style="float:right;">
+                    <a href="/wxshare/index.php/Share/index">                        
+						<img src="__PUBLIC__/appapi/share/images/ic_room_btn_close_pressed.png">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <article id="top_box" style="display: none;">
+            <!-- <button id="play"><img src="__PUBLIC__/appapi/share/images/play.png" width="61"></button> -->
+        </article>
+    </article>
+    <section class="touchbox" id="touchbox"></section>
+	<!-- 下载 -->
+	<div class="down-bottom" onclick="downurl()">
+		<img src="__PUBLIC__/appapi/share/images/down.png">
+	</div>
+</section>
+<!--视频-->
+
+<!--QQ 微信分享提示-->
+<section id="share_alert">
+    <article class="share_prompt">
+        <p></p>
+    </article>
+</section>
+<!--QQ 微信分享提示-->
+
+<script type="text/javascript" src="__PUBLIC__/appapi/share/js/video.js"></script>
+<script type="text/javascript" src="__PUBLIC__/appapi/share/js/videojs-contrib-hls.js"></script>
+<script type="text/javascript" src="__PUBLIC__/appapi/share/js/common.js"></script>
+<script type="text/javascript" src="__PUBLIC__/appapi/share/js/iShare.js"></script>
+<script type="text/javascript" src="__PUBLIC__/appapi/share/js/jquery.md5.js"></script>
+<script type="text/javascript" src="__PUBLIC__/appapi/share/js/login.js"></script>
+
+
+<script type="text/javascript">
+    (new iShare({container:'.iShare3',config:{
+        title: '分享标题',
+        description: '这是分享描述文本',
+        url: '',
+    }}));
+
+    var mode = 1;//代表手机直播手机观看
+    //点击微信分享
+    /*$(".iShare_wechat").click(function(){
+        var objbtn=$(this);
+        Ctrfn.iShare(objbtn);
+    })*/
+    //点击QQ分享
+    /*$(".iShare_qq").click(function(){
+        var objbtn=$(this);
+        Ctrfn.iShare(objbtn);
+    })*/
+   /*$("#share_alert").click(function(){
+        $(this).hide();
+   })*/
+    //微信支付
+    /*$(".weixin_pay").click(function(){
+        Ctrfn.wxPay();
+    })*/
+    //分享
+    $("#more_share").click(function(e){
+        Ctrfn.moreShare();
+    })
+    $("#more-btn").click(function(e){
+        Ctrfn.moreBtn(); 
+    })
+	
+	function downurl(){
+		var href='';
+		if(isIOS){
+			href='{$config['app_ios']}';
+		}else{
+			href='{$config['app_android']}';
+		}
+		location.href=href;
+		return !1;
+	}
+
+    var focusstatus = 0;
+    $(document).on("click",".user_followed",function(){
+		var isattention=$(this).attr('type');
+		if(isattention==1 || !User){
+		  return !1;
+		}
+		var url = "/wxshare/index.php/Share/follow";
+		var _this = $(this);
+		$.ajax({
+			type: 'POST',
+			url: url,
+			data:{'touid':to_uid},
+			dataType:'json',
+			success: function(data){
+				if (data.code== 0){
+					_this.addClass("on");
+					_this.attr("type",1);
+					_this.text('已关注');
+				}
+			}
+		});
+   })
+    //点击播放按钮
+    $(document).on("click","#play",function(){
+        var objbtn=$(this);
+        Ctrfn.play(objbtn);
+    })
+
+
+</script>
+</body>
+</html> 

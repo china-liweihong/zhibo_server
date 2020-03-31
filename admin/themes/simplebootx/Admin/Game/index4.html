@@ -1,0 +1,55 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a>列表</a></li>
+		</ul>
+		
+
+		<!-- <form class="well form-search" method="post" action="{:U('Game/index')}">
+			主播： 
+			<input type="text" name="keyword" style="width: 200px;" value="{$formget.keyword}" placeholder="请输入主播id...">
+			<input type="submit" class="btn btn-primary" value="搜索">
+		</form>	 -->
+		<form method="post" class="js-ajax-form" action="">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th align="center">ID</th>
+						<th>日期</th>
+						<th>平台总收益</th>
+						<th>用户总下注</th>
+						<th>用户总盈（下注获胜）</th>
+						<th>用户庄家收益</th>
+						<th>平台庄家收益</th>
+						<th>主播佣金</th>
+						<th>比例</th>
+						<!-- <th align="center">{:L('ACTIONS')}</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="lists" item="vo">
+					<tr>
+						<td align="center">{$vo.id}</td>
+						<td>{$vo.time}</td>
+						<td>{$vo.profit_platform}</td>
+						<td>{$vo.user_bet}</td>
+						<td>{$vo.profit_user}</td>
+						<td>{$vo.profit_banker}</td>
+						<td>{$vo.profit_banker_platform}</td>
+						<td>{$vo.profit_anchor}</td>
+						<td>{$vo.rate}%</td>
+						<!-- <td align="center">	
+							<a href="{:U('Game/index2',array('gameid'=>$vo['id'],'result'=>$vo['result']))}" >详情</a>
+						</td> -->
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+		</form>
+		<div class="pagination">{$page}</div>
+	</div> 
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

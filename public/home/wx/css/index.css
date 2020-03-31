@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: HelveticaNeue,/*西文无衬线体*IOS系统字体*/
+    arial, /*无衬线体*PC.window.英文字体*/
+    'Droid Sans Fallback',/*无衬线体*安卓系统字体*/
+    STXihei, "华文细黑",/*IOS默认中文字体*/
+    "Microsoft YaHei", "微软雅黑",/*PC.windows*中文字体*/
+        /*默认为*非衬线体*/
+    sans-serif;;
+}
+*{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: 0
+}
+ul li{
+  list-style: none;
+}
+input{
+  border:0;
+  outline: none;
+}
+img{
+  display: block;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.main{
+  width:100%;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #f5fbfb;
+}
+.item.wechart::before,.item.ali::before,.item.bank::before,.pay_change,.diamond_detail{
+  background-image: url("../images/sprit-bg.png");
+  background-repeat: no-repeat;
+  background-size: 2rem auto;
+}
+
+body{
+	background-color: #f5fbfb;
+}
+
+/*充值账户*/
+.main .recharge_account{
+  display: block;
+  width: 100%;
+  height: .53rem;
+  font-size: .16rem;
+  color:#849195;
+  line-height: .53rem;
+  padding:0 0 0 3%;
+}
+/*输入映客号*/
+.main .recharge_con .recharge_txt{
+  height:.54rem;
+  width:100%;
+  padding:0 0 0 3%;
+  background-color: #fff;
+}
+.main .recharge_con .recharge_txt input{
+  display: block;
+  width:85%;
+  height:.54rem;
+  float: left;
+  font-size: .16rem;
+  color:#849195;
+}
+.recharge_txt input::-webkit-input-placeholder{
+	color: #CAD3D7;
+}
+.main .recharge_con .recharge_txt .confirm{
+  display: block;
+  width:15%;
+  line-height:.54rem;
+  float: right;
+  font-size:.16rem;
+  color:#00D8C9;
+  text-align:center;
+  position: relative;
+}
+.main .recharge_con .recharge_txt .confirm::before{
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: .15rem;
+  transform: scaleX(0.5);
+  -webkit-transform: translateY(-50%);
+  background: #CAD3D7;
+}
+/*获取映客号*/
+.main .recharge_con .recharge_point .get_id{
+  display: block;
+  width: 100%;
+  height: .35rem;
+  font-size: .13rem;
+  color:#00D8C9;
+  line-height:.35rem;
+  padding:0 0 0 3%;
+    text-decoration: none;
+}
+/*错误提示*/
+.main .recharge_con .recharge_point .point_error{
+  display: none;
+  background-color: #f5fbfb;
+  width: 100%;
+  height: .35rem;
+  font-size: .13rem;
+  color:#FF6464;
+  line-height:.35rem;
+  padding:0 0 0 3%;
+}
+.main .recharge_con .recharge_point.error .get_id{
+  display: none;
+}
+.main .recharge_con .recharge_point.error .point_error{
+  display: block;
+}
+/*用户信息*/
+.main .recharge_user{
+  width:100%;
+  height:.78rem;
+  display: -webkit-flex;
+  display: flex;
+  /* for uc */
+  display: -webkit-box;
+  /*display: none;*/
+    margin-bottom: 0.15rem;
+    background-color: #ffffff;
+}
+.main .recharge_user.hide{
+    display: none;
+}
+.main .recharge_user .user_image{
+  width:.78rem;
+  padding:.16rem;
+  height:.78rem;
+}
+.main .recharge_user .user_image p{
+  width:100%;
+  height:.46rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main .recharge_user .user_image p img{
+  width:100%;
+  height:100%;
+}
+.main .recharge_user .user_detail{
+  height:100%;
+  -webkit-flex: 1;
+  flex: 1;
+  /* for uc */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  padding-top:.20rem;
+}
+.main .recharge_user .user_detail p:nth-child(1){
+  font-size: .16rem;
+  color: #849195;
+}
+.main .recharge_user .user_detail p:nth-child(2){
+  font-size: .12rem;
+  color: #CAD3D7;
+}
+.main .recharge_user .user_detail p span{
+	color: #CAD3D7;
+}
+.main .recharge_user .user_change{
+  height:100%;
+  width:.78rem;
+}
+.main .recharge_user .user_change p{
+  font-size: .16rem;
+  color:#00D8C9;
+  text-align: center;
+  line-height: .78rem;
+}
+/*财富*/
+.pay_list_container{
+    height: 1.76rem;
+    overflow: hidden;
+}
+.main .wealth{
+  width:100%;
+  height:1.76rem;
+  background-color: #fff;
+  padding: .2rem .19rem 0 .19rem;
+}
+.main .wealth .one_line{
+  width: 100%;
+  height:.83rem;
+  display: flex;
+  display: -webkit-flex;
+  /*for uc*/
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.main .wealth .diamond_detail{
+  width:.91rem;
+  height: .57rem;
+  background-position: 0 -0.89rem;
+  position: relative;
+  margin-bottom: .2rem;
+}
+.main .wealth .diamond_detail p:nth-child(1){
+  width: .85rem;
+  height: .31rem;
+  position: absolute;
+  left: 50%;
+  top: 1%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  text-align: center;
+  font-size: .14rem;
+  line-height: .32rem;
+  color: #ff9116;
+}
+.main .wealth .diamond_detail p:nth-child(2){
+  width: .7rem;
+  height: .19rem;
+  position: absolute;
+  left: 50%;
+  bottom: 4.2%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  text-align: center;
+  font-size: .12rem;
+  line-height: .2rem;
+  color: #ff9116;
+}
+.main .wealth .diamond_detail.send::after{
+  content: attr(data-send);
+  display: block;
+  width: .8rem;
+  height: .4rem;
+  position: absolute;
+  left: .4rem;
+  top: -0.04rem;
+  transform: translateY(-50%) scale(0.5);
+    -webkit-transform: translateY(-50%) scale(0.5);
+  background: #fff;
+  border-radius: .3rem;
+  border: solid 1px #ff9116;
+    font-size: .2rem;
+    line-height: 0.4rem;
+    text-align: center;
+    color: #ff9116;
+}
+.main .wealth .diamond_detail.active{
+
+  background-position: -1.02rem -0.89rem;
+}
+.main .wealth .diamond_detail.active p{
+  color: #fff;
+}
+/*支付*/
+.main .pay{
+  margin-top:.1rem;
+  background-color: #fff;
+}
+.main .pay ul li.item{
+  height: .59rem;
+  width: 100%;
+  position: relative;
+
+}
+.main .pay ul li.item::before{
+  position: absolute;
+  display: block;
+  content: "";
+  left: .23rem;
+  top: 50%;
+  transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+  width: .36rem;
+  height: .36rem;
+}
+
+.main .pay ul li.item.wechart::before{
+    background-position: -0.42rem 0;
+}
+.main .pay ul li.item.ali::before{
+
+  background-position: 0 0;
+}
+.main .pay ul li.item.bank::before{
+  width: .49rem;
+  height: .31rem;
+  left: .16rem;
+  background-position: -0.87rem -0.01rem;
+
+}
+.main .pay ul li.item::after{
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+  background: #f3f3f3;
+}
+.main .pay ul li.item .pay_detail{
+  width:auto;
+  position: absolute;
+  left: .7rem;
+  top: .11rem;
+}
+.main .pay ul li .pay_detail p:nth-child(1){
+  font-size: .15rem;
+  color: #849195;
+}
+.main .pay ul li .pay_detail p:nth-child(2){
+  font-size: .12rem;
+  color: #CAD3D7;
+}
+.main .pay ul li.item .pay_change{
+  width:.24rem;
+  height: .24rem;
+  position:absolute;
+  right: .2rem;
+  top: 50%;
+  transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+  background-position: -0.3rem -0.5rem;
+}
+.main .pay ul li.item.active .pay_change{
+  background-position: 0 -0.5rem;
+}
+/*查看更多*/
+.main .pay .pay_more{
+  width: 100%;
+  height: .54rem;
+}
+.main .pay .pay_more p{
+  width: 1.32rem;
+  margin: 0 auto;
+  line-height: .54rem;
+  font-size:.14rem;
+  color: #849195;
+}
+
+.main .pay .pay_more.down p{
+  background: url(../images/down.png) no-repeat right center;
+}
+.main .pay .pay_more.up p{
+  background: url(../images/up.png) no-repeat right center;
+}
+/*确认支付*/
+.main .pay_confirm{
+  display: block;
+  margin:.4rem 8% .2rem 8%;
+  height:.49rem;
+  text-align: center;
+  line-height: .49rem;
+  font-size: .18rem;
+  color: #fff;
+  background-color: #00D8C9;
+  border-radius: 1rem;
+}
+.main .pay_confirm.disabled{
+    background-color: #CAD3D7;
+
+}
+
+
+
+/* 提示浏览器打开 mask {*/
+.tip-mask{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+.tip-con{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 100%;
+    height: 1.2rem;
+    background: url("../images/tip.jpg") no-repeat;
+    background-size: 100% auto;
+    border-bottom-right-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
+}
+/* 提示浏览器打开 mask }*/
+
+
+#callback_bg {
+    width: 100%;
+    height: 260px;
+    position: absolute;
+    top: 20%;
+    z-index: 100;
+    /* display: none; */
+}
+#callback {
+    width: 60%;
+    height: 100%;
+    margin: 0% auto;
+    text-align: center;
+    border: solid 1px #CCCCCC;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    background-color: #ffffff;
+    font-family: "微软雅黑";
+    position: relative;
+}
+#callback .d1 {
+    font-size: 0.16rem;
+    top: 52%;
+    height: 28px;
+    line-height: 28px;
+    color: #78C2B4;
+    margin-top: 20px;
+}
+#callback .d1, #callback .d4 {
+    width: 60%;
+    left: 20%;
+}
+#callback div {
+    position: absolute;
+    left: 30%;
+    width: 40%;
+}
+#chenggong {
+    position: relative;
+    top: 80px;
+    width: 63px;
+    left: 50%;
+    margin-left: -30px;
+}
+
+#callback .callback_close {
+    margin-top: 11px;
+    margin-right: 3px;
+    position: absolute;
+    right: 4%;
+    width: 8%;
+    top: 10px;
+}
+
+
+
+/*  如何获取映客号 帮助 mask  */
+/*.help-mask{
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: red;
+    display: none;
+}
+.help-mask .h-close{
+    display: block;
+    position: absolute;
+    z-index: 11;
+    width: 0.21rem;
+    height: 0.21rem;
+    line-height: 0.21rem;
+    top: 10px;
+    right: 10px;
+    background: url(/Public/pay/mb/images/sprit-bg.png);
+    background-size: 2rem auto;
+    background-position: -1rem -0.55rem;
+}
+.help-mask div {
+    color: #000;
+    margin: 14px 0 10px 5%;
+}
+.help-mask div span {
+    color: red;
+}
+.help-mask img {
+    width: 90%;
+    margin-left: 5%;
+}*/
+
+

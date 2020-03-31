@@ -1,0 +1,21 @@
+2019-02-15 13:09:55|ERROR|Home.attentRecommend|PDOException: Out of range value for column 'touid' at row 1 in /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Model/Home.php(341): NotORM_Result->insert(Array)
+#3 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Domain/Home.php(70): Model_Home->attentRecommend('23829', '21788,21784,217...')
+#4 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Api/Home.php(412): Domain_Home->attentRecommend('23829', '21788,21784,217...')
+#5 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): Api_Home->attentRecommend()
+#6 /data/wwwroot/livenew.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#7 {main}
+2019-02-15 13:09:55|ERROR|Home.attentRecommend|PDOException: Out of range value for column 'touid' at row 1 in /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Model/Home.php(341): NotORM_Result->insert(Array)
+#3 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Domain/Home.php(70): Model_Home->attentRecommend('23829', '21788,21784,217...')
+#4 /data/wwwroot/livenew.yunbaozhibo.com/api/Appapi/Api/Home.php(412): Domain_Home->attentRecommend('23829', '21788,21784,217...')
+#5 /data/wwwroot/livenew.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): Api_Home->attentRecommend()
+#6 /data/wwwroot/livenew.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#7 {main}
+2019-02-15 19:36:34|DEBUG|succeed to upload file to qiniu|{"hash":"Fnhz1piYwVz6xlqTeivLbVvtVhLq","key":"20190215193634_9769138f5b985503e53f421cdbc44300"}

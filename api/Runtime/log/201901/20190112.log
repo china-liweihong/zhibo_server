@@ -1,0 +1,11 @@
+2019-01-12 10:25:30|DEBUG|succeed to upload file to qiniu|{"hash":"FmBoBzoPffa3oswef-1CtjRDE2Ab","key":"20190112102530_ec60560ed218be2a6723eb177ab8b800"}
+2019-01-12 10:25:38|DEBUG|succeed to upload file to qiniu|{"hash":"FmBoBzoPffa3oswef-1CtjRDE2Ab","key":"20190112102537_6527e2b4abfccf9be1995537234429a2"}
+2019-01-12 10:25:40|DEBUG|succeed to upload file to qiniu|{"hash":"FmBoBzoPffa3oswef-1CtjRDE2Ab","key":"20190112102539_6b82519a03b24f8246b77443cd5fa25d"}
+2019-01-12 10:25:42|DEBUG|succeed to upload file to qiniu|{"hash":"FmBoBzoPffa3oswef-1CtjRDE2Ab","key":"20190112102541_47a7faa951a91432d8b47ecf97766723"}
+2019-01-12 10:25:44|DEBUG|succeed to upload file to qiniu|{"hash":"FmBoBzoPffa3oswef-1CtjRDE2Ab","key":"20190112102544_fc745358276bb2b5b34a9c0de247461f"}
+2019-01-12 10:25:49|DEBUG|succeed to upload file to qiniu|{"hash":"FmBoBzoPffa3oswef-1CtjRDE2Ab","key":"20190112102548_3c55119181d07dd813cb21ca691ed2c6"}
+2019-01-12 10:33:06|DEBUG|succeed to upload file to qiniu|{"hash":"FoM1sI9Ct0qJ153OvskOyy4Bebw9","key":"20190112103306_07a6e2b4f5b7506e6326f423edcc0330"}
+2019-01-12 10:45:24|DEBUG|succeed to upload file to qiniu|{"hash":"FmBoBzoPffa3oswef-1CtjRDE2Ab","key":"20190112104524_ec5772bbfd93bb21be5d6ced50cde9db"}
+2019-01-12 16:02:20|DEBUG|succeed to upload file to qiniu|{"hash":"FvoyeXszbeuWBf0fH3myIJzt3a5M","key":"20190112160220_ffa1dd5511e5ac53942ad07dfdb59809"}
+2019-01-12 17:41:44|DEBUG|succeed to upload file to qiniu|{"hash":"FnnPS0NoNSBC06t0FVnK4k3D2GVi","key":"20190112174144_026903b216ae5eea064469ae779e3fb0"}
+2019-01-12 18:53:08|DEBUG|succeed to upload file to qiniu|{"hash":"FvI6Cxv8zPVYmU4Gi7gaJyF0Sw--","key":"20190112185308_58a4a5cb84da13d64df273dc21907939"}
